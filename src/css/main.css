@@ -5,8 +5,20 @@ input[type=checkbox]:checked + label {
 
 .list{
 	height: 60vh;
+	position: absolute;
 }
 
 .add{
+	font-size: 1em;
+}
+
+.btn{
+	position: relative;
+	
+}
+
+.card {
+	width: 80%;
+	height: 60vh;
 	
 }
