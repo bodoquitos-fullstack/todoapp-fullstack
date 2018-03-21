@@ -1,4 +1,7 @@
 const deadline = require('./deadline');
 const addTask = require('./addTask');
+const addList = require('./addList');
 
-$(document).ready(addTask.init);
+
+$(document).ready(addList.init);
+
