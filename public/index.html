@@ -33,7 +33,33 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modalTask">Modal</a>
+
+        <!-- Modal Structure -->
+        <div id="modalTask" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="task" class="materialize-textarea"></textarea>
+                    <label for="task">Tarea</label>
+                  </div>
+                  <input type="date" name="" value="" class="col s6">
+                </div>
+                <button type="submit" class="waves-effect waves-light btn">Agregar tarea</button>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>

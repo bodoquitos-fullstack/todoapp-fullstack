@@ -5,7 +5,6 @@
 //     addTodo(event) {
 //         event.preventDefault();
 //         const { value: todo } = document.getElementById('todo');
-
 //         let todoId = `todo-${addTask.counter + 1}`;
 
 //         const $todoContainer = $('<div />').addClass('col s12 m6 todo');
@@ -18,10 +17,10 @@
 //         $todoContainer.append($todoCard);
 
 //         $('#todos').append($todoContainer);
-
 //         app.counter = app.counter + 1;
 //     },
 //     counter: 0
 // };
 
 // module.exports = app;
+
