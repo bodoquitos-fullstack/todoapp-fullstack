@@ -1,26 +1,30 @@
-// const addTask = {
-//     init() {
-//         $('#todo-form').submit(addTask.addTodo);
-//     },
-//     addTodo(event) {
-//         event.preventDefault();
-//         const { value: todo } = document.getElementById('todo');
-//         let todoId = `todo-${addTask.counter + 1}`;
+const addTask = {
+    init() {
+      $('.modal').modal();
+      $('#form-task').submit(addTask.task);
+        // modal llama evento de crear tarea
+    },
+    task(event) {
+        event.preventDefault();
+        const { value: task } = document.getElementById('task');
 
-//         const $todoContainer = $('<div />').addClass('col s12 m6 todo');
-//         const $todoCard = $('<div />').addClass('card-panel');
-//         const $todoCheckbox = $('<input type="checkbox" />').attr('id', todoId);
-//         const $todoText = $('<label />').attr('for', todoId).text(todo);
+        let taskId = `todo-${addTask.counter + 1}`;
 
-//         $todoCard.append($todoCheckbox);
-//         $todoCard.append($todoText);
-//         $todoContainer.append($todoCard);
+        const $taskContainer = $('<div />').addClass('col s12 m6');
+        const $taskCard = $('<div />').addClass('card-panel');
+        const $taskCheckbox = $('<input type="checkbox" />').attr('id', taskId);
+        const $taskText = $('<label />').attr('for', taskId).text(task);
 
-//         $('#todos').append($todoContainer);
-//         app.counter = app.counter + 1;
-//     },
-//     counter: 0
-// };
+        $taskCard.append($taskCheckbox);
+        $taskCard.append($taskText);
+        $taskContainer.append($taskCard);
 
-// module.exports = app;
+        $('#tasks').append($taskContainer);
 
+        addTask.counter = addTask.counter + 1;
+        $('#task').val("");
+    },
+    counter: 0
+};
+
+module.exports = addTask;
