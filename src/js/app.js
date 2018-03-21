@@ -3,4 +3,4 @@ const addTask = require('./addTask');
 const addList = require('./addList');
 
 $(document).ready(addList.init);
-deadline.addDeadline();
+
