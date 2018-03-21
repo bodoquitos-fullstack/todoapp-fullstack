@@ -1,6 +1,9 @@
 const addTask = {
     init() {
+      // cuando el boton clickea se abre modal
         $('#todo-form').submit(addTask.addTodo);
+        $('.modal').modal();
+        // modal llama evento de crear tarea
     },
     addTodo(event) {
         event.preventDefault();
@@ -19,9 +22,9 @@ const addTask = {
 
         $('#todos').append($todoContainer);
 
-        app.counter = app.counter + 1;
+        addTask.counter = addTask.counter + 1;
     },
     counter: 0
 };
 
-module.exports = app;
+module.exports = addTask;
