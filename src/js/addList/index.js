@@ -1,3 +1,4 @@
+var task = require('../addTask');
 const addList = {
   init() {
     $('#todo-form').submit(addList.addTodoList);
@@ -15,7 +16,7 @@ const addList = {
           ${titulo}
           <hr>
           <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-          <a href=""><i class="medium material-icons">delete</i></a>
+          <a href="modal1"><i class="medium material-icons">delete</i></a>
         </div>
     </div>`;
 
