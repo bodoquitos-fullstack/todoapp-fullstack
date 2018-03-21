@@ -22,7 +22,7 @@ const list = {
 
         </div>
     </div>`;
-
+// comentario
     $('#todos').append(plantilla);
     $('#list').val("");
     },
@@ -30,3 +30,4 @@ const list = {
 }
 
 module.exports = list;
+
