@@ -1,16 +1,16 @@
 var task = require('../addTask');
-const addList = {
+const list = {
   init() {
-    $('#todo-form').submit(addList.addTodoList);
+    $('#todo-form').submit(list.addList);
     $('.modal').modal();
   },
-  addTodoList(e) {
+  addList(e) {
     e.preventDefault();
     const { value: list} = document.getElementById('list');
     const titulo = $('#list').val();
     
 
-    let todoId = `list-${addList.counter + 1}`; 
+    let todoId = `list-${list.counter + 1}`; 
     const plantilla =
     `<div class="col s12 m5 list">
         <div class="card-panel list">
@@ -29,4 +29,4 @@ const addList = {
   counter: 0
 }
 
-module.exports = addList;
+module.exports = list;
