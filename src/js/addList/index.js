@@ -1,6 +1,7 @@
 const addList = {
   init() {
     $('#todo-form').submit(addList.addTodoList);
+    
   },
   addTodoList(e) {
     e.preventDefault();
