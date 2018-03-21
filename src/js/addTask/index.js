@@ -1,14 +1,12 @@
-const addTask = {
+const task = {
     init() {
-      $('.modal').modal();
-      $('#form-task').submit(addTask.task);
-        // modal llama evento de crear tarea
+      $('#form-task').submit(task.addTask);
     },
-    task(event) {
+    addTask(event) {
         event.preventDefault();
         const { value: task } = document.getElementById('task');
 
-        let taskId = `todo-${addTask.counter + 1}`;
+        let taskId = `todo-${task.counter + 1}`;
 
         const $taskContainer = $('<div />').addClass('col s12 m6');
         const $taskCard = $('<div />').addClass('card-panel');
@@ -21,10 +19,10 @@ const addTask = {
 
         $('#tasks').append($taskContainer);
 
-        addTask.counter = addTask.counter + 1;
+        task.counter = task.counter + 1;
         $('#task').val("");
     },
     counter: 0
 };
 
-module.exports = addTask;
+module.exports = task;
