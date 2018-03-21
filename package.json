@@ -17,6 +17,7 @@
   "author": "Ivan Medina",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^16.1.1"
+    "browserify": "^16.1.1",
+    "stylus": "^0.54.5"
   }
 }
