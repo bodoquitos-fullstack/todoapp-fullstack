@@ -23,25 +23,12 @@
                 <button type="submit" class="waves-effect waves-light btn">Agregar</button>
             </form>
         </div>
-        <div class="row" id="todos">
-            <!-- <div class="col s12 m5 todo">
-                <div class="card-panel list">
-                        Lista 1.
-                    </label>
-                    <a class="btn-floating btn-large waves-effect waves-light red" ><i class="material-icons">add</i></a>
-                    <a href=""><i class="medium material-icons">delete</i></a>  
-                </div>
-            </div> -->
-        </div>
-
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modalTask">Modal</a>
-
+        <div id="todos" class="row"></div>
         <!-- Modal Structure -->
-        <div id="modalTask" class="modal">
+        <div id="modal1" class="modal">
           <div class="modal-content">
             <div class="row">
-              <form class="col s12">
+              <form class="col s12" id="form-task">
                 <div class="row">
                   <div class="input-field col s12">
                     <textarea id="task" class="materialize-textarea"></textarea>
@@ -57,6 +44,7 @@
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
           </div>
         </div>
+
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>

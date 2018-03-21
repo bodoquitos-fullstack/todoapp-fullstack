@@ -1,22 +1,25 @@
-const addList = {
+var task = require('../addTask');
+const list = {
   init() {
-    $('#todo-form').submit(addList.addTodoList);
-    
+    $('#todo-form').submit(list.addList);
+    $('.modal').modal();
   },
-  addTodoList(e) {
+  addList(e) {
     e.preventDefault();
     const { value: list} = document.getElementById('list');
     const titulo = $('#list').val();
     
 
-    let todoId = `list-${addList.counter + 1}`; 
+    let todoId = `list-${list.counter + 1}`; 
     const plantilla =
-    `<div class="col s12 m5 list">
-        <div class="card-panel list">
+    `<div class="col s12 m6 list">
+        <div class="card-panel card">
           ${titulo}
           <hr>
-          <a class="smallwaves-effect waves-light btn right">Add</a>
+
+          <a class="small waves-effect waves-light btn right modal-trigger" href="#modal1">Add</a>
           <a href="#" class="right"><i class="small material-icons">delete</i></a>
+
         </div>
     </div>`;
 
@@ -26,4 +29,4 @@ const addList = {
   counter: 0
 }
 
-module.exports = addList;
+module.exports = list;
