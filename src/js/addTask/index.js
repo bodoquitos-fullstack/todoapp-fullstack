@@ -2,7 +2,21 @@ const deadline = require('../deadline');
 const task = {
     init() {
       deadline.init();
-      $('#form-task').submit(task.addTask);
+    },
+    formTasks(){
+      const templateFormTask =
+        `<form class="col s12" class="form-task">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="task" class="materialize-textarea"></textarea>
+              <label for="task">Tarea</label>
+            </div>
+            <input type="date" name="" value="" class="col s6">
+          </div>
+          <button type="submit" class="waves-effect waves-light btn btn-task">Agregar tarea</button>
+        </form>`;
+      $(this).next().next().append(templateFormTask);
+      $('.btn-task').click(task.addTask);
     },
     addTask(event) {
         event.preventDefault();
@@ -19,8 +33,8 @@ const task = {
         $taskCard.append($taskText);
         $taskContainer.append($taskCard);
 
-        $('#tasks').append($taskContainer);
-
+        $(this).parent().parent().append($taskContainer);
+        $('.form-task').css( "display", "none" );
         task.counter = task.counter + 1;
         $('#task').val("");
     },
