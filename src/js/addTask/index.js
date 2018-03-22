@@ -15,7 +15,7 @@ const task = {
           </div>
           <button type="submit" class="waves-effect waves-light btn btn-task">Agregar tarea</button>
         </form>`;
-      $(this).next().next().append(templateFormTask);
+      $(this).next().next().html(templateFormTask);
       $('.btn-task').click(task.addTask);
     },
     addTask(event) {

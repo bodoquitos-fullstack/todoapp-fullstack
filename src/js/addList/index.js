@@ -15,7 +15,7 @@ const list = {
     const plantilla =
         `<div class="col s12 m6 list" id="${todoId}">
             <div class="card-panel card">
-              ${title}
+              <h1>${title}</h1>
               <hr>
               <a class="small waves-effect waves-light btn right form-tasks">Add</a>
               <a href="#" class="right"><i class="small material-icons">delete</i></a>
