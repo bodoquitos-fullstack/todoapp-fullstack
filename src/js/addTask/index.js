@@ -20,14 +20,14 @@ const task = {
     },
     addTask(event) {
         event.preventDefault();
-        const { value: task } = document.getElementById('task');
+        const { value: title } = document.getElementById('task');
 
         let taskId = `todo-${task.counter + 1}`;
 
         const $taskContainer = $('<div />').addClass('col s12');
         const $taskCard = $('<div />').addClass('card-panel');
         const $taskCheckbox = $('<input type="checkbox" />').attr('id', taskId);
-        const $taskText = $('<label />').attr('for', taskId).text(task);
+        const $taskText = $('<label />').attr('for', taskId).text(title);
 
         $taskCard.append($taskCheckbox);
         $taskCard.append($taskText);
