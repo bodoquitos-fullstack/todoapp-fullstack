@@ -29,11 +29,13 @@ const task = {
         const $taskCard = $('<div />').addClass('card-panel');
         const $taskCheckbox = $('<input type="checkbox" />').attr('id', taskId);
         const $taskTitle = $('<label />').attr('for', taskId).text(title);
-        const $taskDate = $('<p />').addClass('col s12').text(date);
+        const $taskDate = $('<p />').text(date);
+        const $taskDelete = $('<p />').text('x');
 
         $taskCard.append($taskCheckbox);
         $taskCard.append($taskTitle);
-        $taskCard.append($taskDate);
+        $taskCard.append($taskDelete);
+        $taskTitle.append($taskDate);
         $taskContainer.append($taskCard);
 
         $(this).parent().parent().append($taskContainer);
