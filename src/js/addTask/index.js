@@ -1,5 +1,7 @@
+const deadline = require('../deadline');
 const task = {
     init() {
+      deadline.init();
       $('#form-task').submit(task.addTask);
     },
     addTask(event) {
