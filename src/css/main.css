@@ -1,24 +1,16 @@
 input[type=checkbox]:checked + label {
 	text-decoration: line-through;
-} 
-
+}
 
 .list{
 	height: 60vh;
-	position: absolute;
 }
 
 .add{
 	font-size: 1em;
 }
 
-.btn{
-	position: relative;
-	
-}
-
 .card {
 	width: 80%;
 	height: 60vh;
-	
 }

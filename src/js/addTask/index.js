@@ -10,7 +10,7 @@ const task = {
 
         let taskId = `todo-${task.counter + 1}`;
 
-        const $taskContainer = $('<div />').addClass('col s12 m6');
+        const $taskContainer = $('<div />').addClass('col s12');
         const $taskCard = $('<div />').addClass('card-panel');
         const $taskCheckbox = $('<input type="checkbox" />').attr('id', taskId);
         const $taskText = $('<label />').attr('for', taskId).text(task);
