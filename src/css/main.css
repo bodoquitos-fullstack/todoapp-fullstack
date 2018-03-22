@@ -1,6 +1,4 @@
-input[type=checkbox]:checked + label {
-	text-decoration: line-through;
-}
+
 
 .list{
 	height: 60vh;
