@@ -25,20 +25,19 @@ const task = {
 
         let taskId = `todo-${task.counter + 1}`;
 
-        const $taskContainer = $('<div />').addClass('col s12');
-        const $taskCard = $('<div />').addClass('card-panel');
-        const $taskCheckbox = $('<input type="checkbox" />').attr('id', taskId);
-        const $taskTitle = $('<label />').attr('for', taskId).text(title);
-        const $taskDate = $('<p />').text(date);
-        const $taskDelete = $('<p />').text('x');
+        const templateTask =
+          `<div class="col s12">
+            <div class="card-panel">
+              <div>
+                <span>X</span>
+                <input type="checkbox" id="${taskId}">
+                <label for="${taskId}">${title}</label>
+                <p>${date}</p>
+              </div>
+            </div>
+          </div>`;
 
-        $taskCard.append($taskCheckbox);
-        $taskCard.append($taskTitle);
-        $taskCard.append($taskDelete);
-        $taskTitle.append($taskDate);
-        $taskContainer.append($taskCard);
-
-        $(this).parent().parent().append($taskContainer);
+        $(this).parent().parent().append(templateTask);
         $('.form-task').css( "display", "none" );
         task.counter = task.counter + 1;
         $('#title').val("");
