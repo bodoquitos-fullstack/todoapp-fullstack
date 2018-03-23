@@ -1,4 +1,5 @@
 const deadline = require('../deadline');
+const delate = require('../remove');
 const task = {
     init() {
       deadline.init();
@@ -29,7 +30,7 @@ const task = {
           `<div class="col s12">
             <div class="card-panel">
               <div>
-                <span>X</span>
+                <p class="delate-task">X</p>
                 <input type="checkbox" id="${taskId}">
                 <label for="${taskId}">${title}</label>
                 <p>${date}</p>
@@ -38,7 +39,7 @@ const task = {
           </div>`;
 
         $(this).parent().parent().append(templateTask);
-        $('.form-task').css( "display", "none" );
+        $('.delate-task').click(delate);
         task.counter = task.counter + 1;
         $('#title').val("");
         $('#date').val("");
